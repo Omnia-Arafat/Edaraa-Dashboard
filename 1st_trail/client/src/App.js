@@ -3,6 +3,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Log_in from './components/pages/Log_in'
+import Header from './components/common/Header'
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -20,7 +21,8 @@ function App() {
 
   return (
     <div>
-<Log_in/>
+
+<Header/>
 
 </div>
   );

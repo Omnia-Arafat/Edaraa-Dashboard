@@ -14,6 +14,7 @@ const log_in = () => {
         id="password"
         placeholder="Please Enter Your password"
       />
+     <button id='log-in-btn'> Log in</button>
     </div>
   </div>
     </div>

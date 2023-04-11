@@ -43,7 +43,7 @@ margin: 5%;
   }
   
 
-#email ,#password{
+#email ,#password,#log-in-btn{
 
     background: #FFFFFF;
     border: 1px solid #141420;
@@ -65,4 +65,14 @@ margin: 5%;
   
     width: 394px;
   
+}
+
+#log-in-btn{
+
+    width: 114px;
+color: var(--blue-color);
+background-color: var(--red-color);
+margin-top: 60px;
+cursor: pointer;
+
 }
