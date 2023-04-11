@@ -1,6 +1,6 @@
 
 import React from 'react';
-import"../pages/log_in.css";
+import"../../styles/log_in.css";
 
 const log_in = () => {
   return (
