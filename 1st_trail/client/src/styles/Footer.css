@@ -1,0 +1,14 @@
+#footer{
+    background-color: var(--red-color);
+width: 214vh;
+position: absolute;
+height: 66px;
+bottom: 0;
+text-align: center;
+}
+
+#footer-txt{
+    color: white;
+    margin-top: 27px;
+
+}
