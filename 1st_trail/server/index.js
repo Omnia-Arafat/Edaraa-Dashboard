@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // execute the INSERT query
-db.query(
+db.query( 
   "INSERT INTO user (usertype, Email, password,phone,state) VALUES ('admin', 'Esraa shapan.a@gmail.com', 'mypassword','01111111','0');",
   (err, results, fields) => {
     if (err) {

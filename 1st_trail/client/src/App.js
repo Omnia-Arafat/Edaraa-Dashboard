@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Log_in from './components/pages/Log_in'
 import Header from './components/common/Header'
+import Warehouse from './components/pages/Warehouse'
+import Home from './components/pages/Home'
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -22,7 +24,9 @@ function App() {
   return (
     <div>
 
-<Log_in/>
+
+<Header/>
+<Home/>
 
 </div>
   );

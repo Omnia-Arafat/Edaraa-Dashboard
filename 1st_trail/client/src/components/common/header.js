@@ -4,10 +4,18 @@ import '../../styles/Header.css'
 const header = () => {
   return (
     <div>
+    <div id='header'>
     <div id='rectangle-nav-one'>
     </div>
-    <div id='rectangle-nav-two'>
+    <ul id='nav-list'>
+    <li>Home </li>
+    <li>Warehouse</li>
+    <li>Request</li>
+    <li>Log Out</li>
+    
+    </ul>
     </div>
+    <br ></br>
 
 
 

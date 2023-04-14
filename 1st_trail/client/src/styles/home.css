@@ -1,0 +1,35 @@
+h1{
+    
+    position: absolute;
+    left: 1.8%;
+    right: 74.6%;
+    top: 23.1%;
+    bottom: 59.51%;
+    font-weight: 400;
+    line-height: 49px;
+    text-align: right;
+    color: white;
+    font-size: 40px;
+}
+
+h2{
+    position: absolute;
+
+right: 60.1%;
+top: 39%;
+bottom: 38.93%;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 51.56px;
+line-height: 62px;
+text-align: right;
+color: #FFFFFF;
+}
+
+#home-img{
+    
+        width: 38%;
+        float: right;
+
+}
