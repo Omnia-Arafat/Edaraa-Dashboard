@@ -62,11 +62,21 @@ height: 4%;
     margin-left: 250px;
 
 }
-#nav-list li:hover{
+#nav-list li:hover,#nav-list li:active{
 border: 3px solid var(--red-color);
 border-radius: 30px;
 padding: 2px;
 }
 
+.active {
+    font-weight: bold;
+    color: var(--red-color);
+  }
+
 #nav-list li:nth-child(4){
 margin-left: 301px;}
+
+a {
+    color: inherit;
+    text-decoration: none;
+  }

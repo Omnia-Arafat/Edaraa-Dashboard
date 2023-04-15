@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <div id='footer'>
       <div id='footer-txt'>
-      © 2023 Your Team Elhana Company.</div>
+      © 2023 Team Elhana Company.</div>
     </div>
     </div>
   )
