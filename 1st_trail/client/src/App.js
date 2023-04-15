@@ -1,7 +1,9 @@
-
+// ===================importing libraries===================
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { BrowserRouter as Router, Routes, Route, Outlet,Link } from "react-router-dom";
+// ======================importing components and pages========
 import Log_in from './components/pages/Log_in'
 import Header from './components/common/Header'
 import Footer from './components/common/Footer'
@@ -9,6 +11,14 @@ import Warehouse from './components/pages/Warehouse'
 import Home from './components/pages/Home'
 
 function App() {
+  const [title, setTitle] = useState('Edaraa');
+
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+
+
+
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -27,7 +37,7 @@ function App() {
 
 
 <Header/>
-<Home/>
+<Outlet/>
 <Footer/>
 
 </div>
