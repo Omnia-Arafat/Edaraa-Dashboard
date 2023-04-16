@@ -4,3 +4,83 @@
   font-size: 46px;
   margin: 22px;
 }
+#warehouse-container{
+  height: 232.920166015625px;
+width: 401.1442565917969px;
+margin:50px;
+}
+
+
+#warehouse-body{
+
+  height: 172.84031677246094px;
+  width: 401.1442565917969px;
+  border-radius: 11px;
+  background-color: var(--blue-color);
+  
+  
+}
+#warehouse-body-in{
+
+  height: 163px;
+    width: 300px;
+  border-radius: 11px;
+  background-color: var(--blue-color);
+
+}
+
+.box{
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+
+}
+ .box::before{
+  content: attr(data-work);
+  position: absolute;
+  background-color: var(--red-color);
+  width: calc(100% - 10px);
+  height:calc(100% - 10px);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--blue-color);
+  transition: .3s;
+  font-size: 1.5rem;
+  transform: translateX(calc(-100% - 5px));
+  border-radius: 11px;
+  cursor: pointer;
+}
+ .box:hover:before{
+  transform: translateX(0);
+}
+
+#warehouse-control{
+
+  display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 27px;
+margin-left: 29px;
+}
+
+#warehouse-control button{
+    text-decoration: none;
+  color: var(--red-color);
+  font-weight: bold;
+  background-color: var(--blue-color);
+  border-radius: 50%;
+  padding: 15px;
+  margin-right: 22px;
+  border: 1px solid #141420;
+  width: 99px;
+}
+#warehouse-control button:hover{
+  background-color: rgba(136, 225, 242, 0.25);
+
+
+}
+
+
