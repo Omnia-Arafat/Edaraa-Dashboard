@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Warehouse_info = () => {
+const Update_product = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Warehouse_info = () => {
   )
 }
 
-export default Warehouse_info
+export default Update_product
