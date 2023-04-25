@@ -34,8 +34,22 @@ export const router = createBrowserRouter([
       },
       {
         path: "/Warehouse_info/:id",
-        element: <Warehouse_info />,
+        
+        children: [
+          {
+            path: "",
+            element: <Warehouse_info />,
+          },
+          {
+            path: "",
+            element: <Warehouse_info />,
+          },
+    
+        ],
       },
+
+
+      
     ],
   },
 ]);
