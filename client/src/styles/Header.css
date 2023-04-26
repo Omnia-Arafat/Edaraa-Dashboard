@@ -1,10 +1,21 @@
 :root{
+    /* 
+    --background-color : #111111;
     --items-color : #172224;
     --blue-color : #88e1f2;
     --red-color :#ed2024;
     --green-color :#2e8807;
     --gray-color : #141C1D;
-    --font-name : 'Abril Fatface';
+    --nav-color : #000000;
+    --font-name : 'Abril Fatface'; */
+    --background-color: #decdcd;
+    --items-color: #96a8ab;
+    --blue-color: #fff;
+    --red-color: #5f0270;
+    --green-color: #2e8807;
+    --gray-color: #b4c5c7;
+    --nav-color: #de5e5f;
+    --font-name: 'Abril Fatface';
 }
 #header{
     z-index: 1;
@@ -23,7 +34,7 @@ font-family: var(--font-name);
     right: 3.07%;
     top: 2.9%;
     bottom: 85.4%;
-    background: #000000;
+    background: var(--nav-color);
     box-shadow: 0px 4px 5px 12px rgba(136, 225, 242, 0.25);
     border-radius: 19px;
 }
@@ -35,7 +46,7 @@ font-family: var(--font-name);
     right: 5.49%;
     top: 5.7%;
     bottom: 88.1%;
-    background: #000000;
+    background: var(--nav-color);
     box-shadow: 0px 1px 2px 10px rgba(136, 225, 242, 0.25);
     border-radius: 5px;
 }
@@ -48,7 +59,7 @@ left: 4.76%;
 right: 5.49%;
 top: 4.7%;
 bottom: 88.1%;
-background: #000000;
+background: var(--nav-color);
 box-shadow: 0px 1px 2px 10px rgba(136, 225, 242, 0.25);
 border-radius: 5px;
 list-style: none;

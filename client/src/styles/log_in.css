@@ -1,11 +1,11 @@
-:root{
+/* :root{
     --background-color : #111111;
     --items-color : #172224;
     --blue-color : #88e1f2;
     --red-color :#ed2024;
     --green-color :#2e8807;
     --font-name : 'Abril Fatface';
-}
+} */
 
 body{
 background-color: var(--background-color);
