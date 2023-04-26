@@ -1,16 +1,16 @@
-#card-product-div{
+#card-supervisor-div{
     background-color: var(--items-color);
     border-radius: 17px;
     margin:30px 10px;
 }
 
-#product-img {
+#supervisor-img {
     width: 286px;
     height: 180px;
     object-fit: cover;
   }
 
-#card-product{
+#card-supervisor{
 
     margin: 50px;
 
@@ -31,7 +31,7 @@
     
 }
 
-#product-controls{
+#supervisor-controls{
     display: block;
 
 }

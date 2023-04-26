@@ -7,6 +7,7 @@ import Request from "./components/pages/Request";
 import Log_Out from "./components/pages/Log_Out";
 import Warehouse_info from "./components/pages/Warehouse_info";
 import Mange_products from "./components/pages/Mange_product/Mange_products";
+import Mange_supervisor from "./components/pages/Mange_supervisor/Mange_supervisor";
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ export const router = createBrowserRouter([
       {
         path: "/Mange_products",
         element: <Mange_products />,
+      },
+      {
+        path: "/Mange_supervisor",
+        element: <Mange_supervisor />,
       },
     ],
   },

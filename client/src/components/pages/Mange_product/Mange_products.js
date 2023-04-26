@@ -1,10 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import "../../../styles/Mange_products.css";
-// import "../../styles/Product_card.css"
-// import "../../styles/Warehouse_info.css"
-import { Button } from "react-bootstrap";
-
 import Product_card from "../Product_card";
 
 const Mange_products = () => {
@@ -53,6 +49,9 @@ const Mange_products = () => {
     </form>
 
 <div id="product_div_cont">
+      <Product_card />
+      <Product_card />
+      <Product_card />
       <Product_card />
       <Product_card />
       <Product_card />
