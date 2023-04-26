@@ -6,6 +6,7 @@ import Warehouse_list from "./components/pages/Warehouse_ist";
 import Request from "./components/pages/Request";
 import Log_Out from "./components/pages/Log_Out";
 import Warehouse_info from "./components/pages/Warehouse_info";
+import Mange_products from "./components/pages/Mange_product/Mange_products";
 
 export const router = createBrowserRouter([
   {
@@ -34,7 +35,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/Warehouse_info/:id",
-        
+
         children: [
           {
             path: "",
@@ -44,12 +45,13 @@ export const router = createBrowserRouter([
             path: "",
             element: <Warehouse_info />,
           },
-    
         ],
       },
 
-
-      
+      {
+        path: "/Mange_products",
+        element: <Mange_products />,
+      },
     ],
   },
 ]);
