@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { useForm } from "react-hook-form";
+import React from 'react';
 import "../../styles/Warehouse_info.css"
 import "../../styles/Product_card.css"
 import { Button } from 'react-bootstrap';
