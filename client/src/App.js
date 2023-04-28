@@ -2,15 +2,30 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import ReactSwitch from 'react-switch';
 import { BrowserRouter as Router, Routes, Route, Outlet,Link } from "react-router-dom";
 // ======================importing components and pages========
 import Log_in from './components/pages/Log_in'
 import Header from './components/common/Header'
 import Footer from './components/common/Footer'
-import Warehouse from './components/pages/Warehouse'
-import Home from './components/pages/Home'
 
 function App() {
+
+
+  const [theme, setTheme] = useState("light");
+
+    const handleClick = () => {
+      const body = document.querySelector('body');
+      body.classList.toggle('light');
+      body.classList.toggle('dark');
+
+      if (theme === "light") {
+        setTheme("dark");
+      } else {
+        setTheme("light");
+      }
+    };
+
   const [title, setTitle] = useState('Edaraa');
 
   useEffect(() => {
@@ -33,9 +48,18 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className={theme} id='app-div'>
 
+    
+    <div id='dark_mode_button'>
+      <ReactSwitch       onChange={handleClick} checked={theme==='dark'}/>
+      <div className='label'>
 
+      {theme === "light" ? "Dark Mode" : "Light Mode"}
+
+      </div>
+
+  </div>
 <Header/>
 <Outlet/>
 <Footer/>

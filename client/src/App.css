@@ -1,0 +1,62 @@
+:root{
+    
+    /* --background-color : #111111;
+    --items-color : #172224;
+    --blue-color : #88e1f2;
+    --red-color :#ed2024;
+    --green-color :#2e8807;
+    --gray-color : #141C1D;
+    --nav-color : #000000;
+    --font-name : 'Abril Fatface'; */
+
+
+    
+    /* --background-color: #decdcd;
+    --items-color: #96a8ab;
+    --blue-color: #fff;
+    --red-color: #5f0270;
+    --green-color: #2e8807;
+    --gray-color: #b4c5c7;
+    --nav-color: #de5e5f;
+    --font-name: 'Abril Fatface'; */
+}
+
+
+.light{
+
+    --background-color: #decdcd;
+    --items-color: #96a8ab;
+    --blue-color: #fff;
+    --red-color: #5f0270;
+    --green-color: #2e8807;
+    --gray-color: #b4c5c7;
+    --nav-color: #de5e5f;
+    --font-name: 'Abril Fatface';
+
+}
+
+#dark_mode_button{
+
+    float: right;
+    margin-top: 132px;
+    margin-right: 5%;
+}
+.label{
+
+}
+
+.dark{
+
+    --background-color : #111111;
+    --items-color : #172224;
+    --blue-color : #88e1f2;
+    --red-color :#ed2024;
+    --green-color :#2e8807;
+    --gray-color : #141C1D;
+    --nav-color : #000000;
+    --font-name : 'Abril Fatface';
+
+}
+body{
+    background-color: var(--background-color);
+}
