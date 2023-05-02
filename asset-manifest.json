@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Edaraa-Dashboard/static/css/main.897c35f1.chunk.css",
+    "main.js": "/Edaraa-Dashboard/static/js/main.2d5bc107.chunk.js",
+    "main.js.map": "/Edaraa-Dashboard/static/js/main.2d5bc107.chunk.js.map",
+    "runtime-main.js": "/Edaraa-Dashboard/static/js/runtime-main.553c59fe.js",
+    "runtime-main.js.map": "/Edaraa-Dashboard/static/js/runtime-main.553c59fe.js.map",
+    "static/js/2.7f8ae504.chunk.js": "/Edaraa-Dashboard/static/js/2.7f8ae504.chunk.js",
+    "static/js/2.7f8ae504.chunk.js.map": "/Edaraa-Dashboard/static/js/2.7f8ae504.chunk.js.map",
+    "index.html": "/Edaraa-Dashboard/index.html",
+    "static/css/main.897c35f1.chunk.css.map": "/Edaraa-Dashboard/static/css/main.897c35f1.chunk.css.map",
+    "static/js/2.7f8ae504.chunk.js.LICENSE.txt": "/Edaraa-Dashboard/static/js/2.7f8ae504.chunk.js.LICENSE.txt",
+    "static/media/cat.bc9e4d10.jpg": "/Edaraa-Dashboard/static/media/cat.bc9e4d10.jpg",
+    "static/media/home-imge.1b3326e3.png": "/Edaraa-Dashboard/static/media/home-imge.1b3326e3.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.553c59fe.js",
+    "static/js/2.7f8ae504.chunk.js",
+    "static/css/main.897c35f1.chunk.css",
+    "static/js/main.2d5bc107.chunk.js"
+  ]
+}
