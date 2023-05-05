@@ -1,6 +1,6 @@
 //============== import the database =============================
 
-const mysql = require("mysql");
+const mysql = require ("mysql");
 
 //============== connect to the database =============================
 
@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
 
     host: 'localhost',
     user: 'root',
-    password: 'root123',
+    password: '',
     port:"3306",
     database:"cruddatabase"
     

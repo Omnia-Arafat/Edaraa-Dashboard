@@ -1,0 +1,93 @@
+const router = require("express").Router();
+const conn = require("../DB/DbConnection");
+const supervisor = require("../midleware/supervisor");
+const admin = require("../midleware/admin");
+const { body, validationResult } = require("express-validator");
+const upload = require("../midleware/uploadimage");
+const util = require("util"); // helper
+const fs = require("fs"); // file system
+creat new warehouse(admin)
+router.post(
+    "",
+   // upload.single("image"),
+    body("name")
+      .isString()
+      .withMessage("please enter a valid warehouse name")
+      .isLength({ min: 10 })
+      .withMessage("movie name should be at lease 10 characters"),
+  
+    body("location")
+      .isString()
+      .withMessage("please enter a location "),
+      //.isLength({ min: 20 }) 
+      //.withMessage("description name should be at lease 20 characters"),
+      body("status")
+      .isLength({ min: 20 })
+      .withMessage("enter warehouose is active or not ...0=>inactive/1=>active"),
+    async (req, res) => {
+      try {
+        // 1- VALIDATION REQUEST [manual, express validation]
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+          return res.status(400).json({ errors: errors.array() });
+        }
+        res.status(200).json({
+            msg :"warehouse created",
+        });
+  
+        // 2- VALIDATE THE IMAGE
+        if (!req.file) {
+          return res.status(400).json({
+            errors: [
+              {
+                msg: "Image is Required",
+              },
+            ],
+          });
+        }
+  
+        /*// 3- PREPARE MOVIE OBJECT
+        const movie = {
+          name: req.body.name,
+          description: req.body.description,
+          image_url: req.file.filename,
+        };
+  
+        // 4 - INSERT MOVIE INTO DB
+        const query = util.promisify(conn.query).bind(conn);
+        await query("insert into movies set ? ", movie);
+        res.status(200).json({
+          msg: "movie created successfully !",
+        });
+        //console.log(err);
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    }
+  );*/
+  router.post("/create", (req, res) => {
+    res.status(200).json({
+      msg : "warehouse created",
+    });
+  });
+
+  router.put("/updated",(req,res) => {
+    res.status(200).json({
+      msg : "warehouse updated",
+    });
+  });
+
+    router.delete("/delete",(req,res) => {
+    res.status(200).json({
+      msg : "warehouse deleted",
+    });
+  });
+
+
+//list
+   router.get("",(req,res) => {
+    res.status(200).json({
+      warehouse : [],
+    });
+  });
+  module.exports = router;
