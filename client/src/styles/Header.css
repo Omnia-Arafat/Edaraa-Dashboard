@@ -104,13 +104,15 @@ height: 4%;
 
 #nav-list li{
     cursor: pointer;
-    margin-left: 250px;
+    margin-left: 169px;
 
 }
 #nav-list li:hover,#nav-list li:active{
-border: 3px solid var(--red-color);
-border-radius: 30px;
-padding: 2px;
+    border: 2px solid var(--red-color);
+    border-radius: 30px;
+    padding: 3px;
+      padding-bottom: 3px;
+    padding-bottom: 20px;
 }
 
 .active {
