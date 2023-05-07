@@ -10,6 +10,11 @@ import Add_warehouse from "./components/pages/Mange_warehouse/Add_warehouse";
 import Warehouse_info from "./components/pages/Warehouse_info";
 import Mange_products from "./components/pages/Mange_product/Mange_products";
 import Mange_supervisor from "./components/pages/Mange_supervisor/Mange_supervisor";
+<<<<<<< Updated upstream
+=======
+
+//import log_in from "./components/pages/Log_in";
+>>>>>>> Stashed changes
 import Registration from "./components/pages/Registration";
 
 export const router = createBrowserRouter([
