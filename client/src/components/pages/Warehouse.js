@@ -15,7 +15,7 @@ function Warehouse(props) {
         </div>
         <div id="warehouse-control">
           <button>
-            <Link>Add</Link>
+            <Link to={"/Mange_products/"}>Add</Link>
           </button>
           <button>
             <Link>Update</Link>
