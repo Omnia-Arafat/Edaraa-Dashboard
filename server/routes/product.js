@@ -7,6 +7,7 @@ const upload = require("../midleware/uploadimage");
 const util = require("util"); // helper
 const fs = require("fs"); // file system
 
+
 //creat new product(admin)
 router.post(
     "",admin,

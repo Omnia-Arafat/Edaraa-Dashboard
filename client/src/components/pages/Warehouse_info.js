@@ -1,12 +1,57 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import Product_card from "./Product_card";
-
 import "../../styles/Warehouse_info.css";
+import axios from "axios";
+import Spinner from "react-bootstrap/Spinner";
+import Alert from "react-bootstrap/Alert";
 
 
 
 const Warehouse_info = () => {
+
+  const [products, setProduct] = useState({
+    loading: true,
+    results: [],
+    err: null,
+    reload: 0,
+  });
+
+  useEffect(() => {
+    setProduct({ ...products, loading: true });
+    axios
+      .get("http://localhost:5000/product", {
+        
+      })
+      .then((resp) => {
+        console.log(resp);
+        setProduct({ ...products, results: resp.data, loading: false, err: null });
+      })
+      .catch((err) => {
+        setProduct({
+          ...products,
+          loading: false,
+          err: " something went wrong, please try again later ! ",
+        });
+      });
+  }, [products.reload]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   const {
     register,reset,

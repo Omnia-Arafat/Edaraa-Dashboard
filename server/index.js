@@ -59,7 +59,7 @@ const manage_supervisor = require("./routes/manage_supervisor");
 
 
 // ====================  API ROUTES [ ENDPOINTS ]  ====================
-app.use("/auth", auth);
-app.use("/warehouse", warehouse);
-app.use("/product", product);
-app.use("/manage_supervisor", manage_supervisor);
+express.Router.use("/auth", auth);
+express.Router.use("/warehouse", warehouse);
+express.Router.use("/product", product);
+express.Router.use("/manage_supervisor", manage_supervisor);
