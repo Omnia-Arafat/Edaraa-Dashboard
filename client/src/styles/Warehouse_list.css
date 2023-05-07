@@ -1,6 +1,10 @@
 #warehouse_list{
-    margin: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;}
+    margin: 3px;
+    margin-top: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 82px;
+  
+  }
