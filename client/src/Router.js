@@ -5,6 +5,7 @@ import App from "./App";
 import Warehouse_list from "./components/pages/Warehouse_ist";
 import Request from "./components/pages/Request";
 import Log_Out from "./components/pages/Log_Out";
+import Log_in from "./components/pages/Log_in";
 import Add_warehouse from "./components/pages/Mange_warehouse/Add_warehouse";
 import Warehouse_info from "./components/pages/Warehouse_info";
 import Mange_products from "./components/pages/Mange_product/Mange_products";
@@ -18,7 +19,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <Log_in />,
       },
       {
         path: "/home",

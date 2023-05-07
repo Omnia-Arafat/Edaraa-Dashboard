@@ -1,0 +1,130 @@
+#add_warehouse_form input::placeholder{
+    font-family: var(--font-name);
+    font-size: 31px;
+}
+
+.form {
+    background: #0e101c;
+    max-width: 400px;
+    margin: 0 auto;
+    
+  }
+
+  #add_warehouse_form{
+
+    text-align: center;
+    margin-top: 80px;
+  }
+  
+  #add_warehouse_form label {
+    color: #bf1650;
+    font-family: var(--font-name);
+    font-size: 13px;
+    display: inline;
+  }
+  
+  #add_warehouse_form label::before {
+    display: inline;
+    content: "⚠ ";
+  }
+  
+  #add_warehouse_form input {
+    font-family: var(--font-name);
+    font-size: 31px;
+    display: inline-block;
+box-sizing: border-box;
+width: 23%;
+border-radius: 4px;
+border: 1px solid white;
+padding: 10px 15px;
+
+margin: 50px 57px 2px;
+height: 70px;
+  }
+  
+
+ #add_warehouse_form #submit-button{
+
+    float: right;
+margin-top: 114px;
+margin-right: 126px;
+  }
+  
+  #add_warehouse_form label {
+    font-size: 14px;
+    font-weight: 193;
+  }
+  
+  #add_warehouse_form button[type="submit"],
+  #add_warehouse_form input[type="submit"] {
+    background: #ec5990;
+color: white;
+text-transform: uppercase;
+border: none;
+margin-top: 40px;
+letter-spacing: 5px;
+font-family: var(--font-name);
+font-size: 31px;
+text-align: center;
+padding: 6px;
+  }
+  
+  #add_warehouse_form button[type="submit"]:hover,
+  #add_warehouse_form input[type="submit"]:hover {
+    background: #bf1650;
+  }
+  
+  #add_warehouse_form  button[type="submit"]:active,
+  #add_warehouse_form input[type="button"]:active,
+  #add_warehouse_form input[type="submit"]:active {
+    transition: 0.3s all;
+    transform: translateY(3px);
+    border: 1px solid transparent;
+    opacity: 0.8;
+  }
+  
+  #add_warehouse_form input:disabled {
+    opacity: 0.4;
+  }
+  
+  #add_warehouse_form input[type="button"]:hover {
+    transition: 0.3s all;
+  }
+  
+  #add_warehouse_form button[type="submit"],
+  #add_warehouse_form input[type="button"],
+  #add_warehouse_form input[type="submit"] {
+    -webkit-appearance: none;
+  }
+  
+  #add_warehouse_form .App {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #add_warehouse_form button[type="button"] {
+    display: block;
+    appearance: none;
+    background: #333;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 4px;
+  }
+  
+  #add_warehouse_form hr {
+    margin-top: 30px;
+  }
+  
+  #add_warehouse_form button {
+    display: block;
+    appearance: none;
+    margin-top: 40px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 4px;
+  }
+  
