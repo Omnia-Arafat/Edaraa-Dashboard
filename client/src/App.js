@@ -5,7 +5,7 @@ import axios from 'axios';
 import ReactSwitch from 'react-switch';
 import { BrowserRouter as Router, Routes, Route, Outlet,Link } from "react-router-dom";
 // ======================importing components and pages========
-import Log_in from './components/pages/Log_in'
+import Log_in from './components/pages/LogIn'
 import Header from './components/common/Header'
 import Footer from './components/common/Footer'
 
