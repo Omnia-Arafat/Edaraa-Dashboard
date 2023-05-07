@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
-import "../../styles/Add_warehouse.css"
+import "../../../styles/Add_warehouse.css"
 const Add_warehouse = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
