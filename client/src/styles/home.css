@@ -7,7 +7,7 @@ h1{
     bottom: 59.51%;
     font-weight: 400;
     line-height: 49px;
-    text-align: right;
+        text-align: right;
     color: white;
     font-size: 40px;
 }
@@ -29,7 +29,10 @@ color: #FFFFFF;
 
 #home-img{
     
-        width: 38%;
-        float: right;
+    width: 29%;
+    float: right;
+    margin-right: -9%;
+    margin-top: 7%;
+  }
 
-}
+

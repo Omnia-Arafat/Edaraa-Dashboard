@@ -18,7 +18,7 @@ margin:50px;
   border-radius: 11px;
   background-color: var(--blue-color);
   
-  
+  box-shadow: 2px 0 22px 0px var(--red-color);
 }
 #warehouse-body-in{
 
