@@ -1,0 +1,78 @@
+/* :root{
+    --background-color : #111111;
+    --items-color : #172224;
+    --blue-color : #88e1f2;
+    --red-color :#ed2024;
+    --green-color :#2e8807;
+    --font-name : 'Abril Fatface';
+} */
+
+body{
+    font-family: var(--font-name);
+    color: white;
+    }
+    
+    #welcome-text{
+    
+        text-align: center;
+        font-size: 79px;
+        color: var(--blue-color);
+    }
+    
+    .container{
+    
+        display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    margin: 5%;
+    }
+    
+    .main-content{
+      
+        left: 43%;
+        right: 50%;
+        top: 130.8%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        margin: 40px;
+        width: auto;
+      }
+      
+    
+    #email ,#password,#log-in-btn{
+    
+        background: #FFFFFF;
+        border: 1px solid #141420;
+        border-radius: 7px;
+        height: 47px;
+        width: 500px;
+        padding: 3px;
+        margin: 14px;
+        color: #111;
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        font-family: var(--font-name);
+        letter-spacing: 2px;
+    }
+    
+    #password{
+    
+      
+        width: 394px;
+      
+    }
+    
+    #log-in-btn{
+    
+        width: 114px;
+    color: var(--blue-color);
+    background-color: var(--red-color);
+    margin-top: 60px;
+    cursor: pointer;
+    
+    }
