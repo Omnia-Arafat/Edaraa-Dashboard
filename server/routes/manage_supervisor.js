@@ -1,9 +1,10 @@
-const router = require("express").Router();
+const express = require('express')
+const router = express.Router()
 const conn = require("../DB/DbConnection");
-const supervisor = require("../midleware/supervisor");
-const admin = require("../midleware/admin");
+const supervisor = require("../middleware/supervisor");
+const admin = require("../middleware/admin");
 const { body, validationResult } = require("express-validator");
-const upload = require("../midleware/uploadimage");
+const upload = require("../middleware/uploadimage");
 const util = require("util"); // helper
 const fs = require("fs"); // file system
 
@@ -73,8 +74,8 @@ router.post(
  
 
  router.put(
-  "/:id", // params
-  admin,
+  "/:id",admin, // params
+  
   body("email").isEmail().withMessage("please enter a valid email!"),
   body("name")
     .isString()
@@ -123,8 +124,8 @@ router.post(
 );
 
 router.delete(
-  "/:id", // params
-  admin,
+  "/:id", admin,// params
+  
   async (req, res) => {
     try {
       // 1- CHECK IF supervisor EXISTS OR NOT
@@ -151,12 +152,7 @@ router.delete(
 router.get("", async (req, res) => {
   const query = util.promisify(conn.query).bind(conn);
   const users = await query("select * from users where role = 0");
- /* let search = "";
-  if (req.query.search) {
-    // QUERY PARAMS
-    search = `where name LIKE '%${req.query.search}%' or description LIKE '%${req.query.search}%'`;
-  }
-  const warehouse = await query(`select * from warehouse ${search}`);*/
+ 
   
   res.status(200).json(users);
 });

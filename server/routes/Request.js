@@ -1,4 +1,4 @@
-const router = require("express").Router();
+/*const router = require("express").Router();
 const conn = require("../DB/DbConnection");
 // const authorized = require("../middleware/authorize");
 const admin = require("../middleware/admin");
@@ -209,3 +209,4 @@ router.post(
 // );
 
 module.exports = router;
+*/

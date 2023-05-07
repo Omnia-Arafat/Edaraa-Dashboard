@@ -1,6 +1,7 @@
 const conn = require("../DB/DbConnection");
 const util = require("util"); // helper
 
+
 const supervisor = async (req, res, next) => {
   const query = util.promisify(conn.query).bind(conn);
   const { token } = req.headers;
@@ -10,7 +11,7 @@ const supervisor = async (req, res, next) => {
     next();
   } else {
     res.status(403).json({
-      msg: "you are not supervisor to access this route !",
+      msg: "you are not authorized to access this route !",
     });
   }
 };

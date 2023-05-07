@@ -1,10 +1,10 @@
-const router = require("express").Router();
+const express = require('express')
+const router = express.Router()
 const conn = require("../DB/DbConnection");
 const { body, validationResult } = require("express-validator");
 const util = require("util"); // helper
 const bcrypt = require("bcrypt");
 const crypto = require("crypto");
-
 // LOGIN
 router.post(
   "/login",
