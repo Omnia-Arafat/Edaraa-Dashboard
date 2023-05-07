@@ -54,9 +54,12 @@ app.listen("5000", () => {
 // ====================  Required Module ====================
 const auth = require("./routes/auth");
 const warehouse = require("./routes/warehouse");
-
+const product = require("./routes/product");
+const manage_supervisor = require("./routes/manage_supervisor");
 
 
 // ====================  API ROUTES [ ENDPOINTS ]  ====================
 app.use("/auth", auth);
 app.use("/warehouse", warehouse);
+app.use("/product", product);
+app.use("/manage_supervisor", manage_supervisor);
