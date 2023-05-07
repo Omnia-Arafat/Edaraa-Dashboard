@@ -1,4 +1,4 @@
-onst conn = require("../db/dbConnection");
+const conn = require("../db/dbConnection");
 const util = require("util"); // helper
 
 const supervisor = async (req, res, next) => {
