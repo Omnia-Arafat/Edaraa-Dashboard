@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import Supervisor_card from "./Supervisor_card";
 import "../../../styles/Supervisor_card.css"
+import "../../../styles/Mange_supervisor.css"
 const Mange_supervisor = () => {
   const {
     register,
