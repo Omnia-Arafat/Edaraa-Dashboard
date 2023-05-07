@@ -24,7 +24,9 @@ const Warehouse_list = () => {
   };
 
 
-  return <div id="warehouse_list">{display_warehouses()} </div>;
+  return <div id="warehouse_list">{display_warehouses()} 
+  
+  </div>;
 };
 
 
