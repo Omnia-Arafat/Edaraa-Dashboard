@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const conn = require("../DB/DbConnection");
-const supervisor = require("../midleware/supervisor");
-const admin = require("../midleware/admin");
+const supervisor = require("../middleware/supervisor");
+const admin = require("../middleware/admin");
 const { body, validationResult } = require("express-validator");
-const upload = require("../midleware/uploadimage");
+const upload = require("../middleware/uploadimage");
 const util = require("util"); // helper
 const fs = require("fs"); // file system
 
