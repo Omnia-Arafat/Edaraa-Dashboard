@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/Warehouse_list.css";
 import Warehouse from "./Warehouse";
 import { Data } from "../../core/data/warehouse_mokup_data";
+import { Link } from "react-router-dom";
 
 const Warehouse_list = () => {
 
@@ -28,9 +29,17 @@ const Warehouse_list = () => {
   };
 
 
-  return <div id="warehouse_list">{display_warehouses()} 
+  return (
+
+    
+    <div id="warehouse_list">
+    
+    
+    {display_warehouses()} 
+
+    <Link to={"/Add_warehouse/"}><button id="create-warehouse"> Create+ </button> </Link>
   
-  </div>;
+  </div>);
 };
 
 

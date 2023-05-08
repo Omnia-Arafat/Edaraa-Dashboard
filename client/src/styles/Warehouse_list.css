@@ -8,3 +8,18 @@
   margin-top: 82px;
   padding-bottom: 22%;
   }
+
+  #create-warehouse{
+
+    float: left;
+z-index: 2;
+font-size: 24px;
+position: fixed;
+top: 76%;
+right: 12px;
+border-radius: 33px;
+border: var(--gray-color) solid;
+box-shadow: 2px 0 22px 0px var(--red-color);
+font-family: var(--font-type);
+
+  }
