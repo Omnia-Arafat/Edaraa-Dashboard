@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 
 import Card from 'react-bootstrap/Card';
 import productImage from '../../../uploaded/images/cat.jpg';
+import { Link } from 'react-router-dom';
 const Supervisor_card = () => {
     return (
         <div id='Product_card'>
@@ -18,7 +19,7 @@ const Supervisor_card = () => {
            warehouse#id
           </Card.Text>
           <div id='product-controls'> </div>
-          <Button className='general-button' id='update-button' >Update</Button>
+          <Link to={"/Update_supervisor/"}><Button className='general-button' id='update-button' > Update</Button></Link>
           <Button className='general-button  delete-button' >Delete</Button>
         </Card.Body> 
     
