@@ -24,6 +24,14 @@ const header = () => {
               to="/Warehouse"
               className={({ isActive }) => (isActive ? "active" : "navLink")}
             >
+             Manage Warehouse
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/Warehouse"
+              className={({ isActive }) => (isActive ? "active" : "navLink")}
+            >
               Warehouse
             </NavLink>
           </li>
@@ -33,6 +41,30 @@ const header = () => {
               className={({ isActive }) => (isActive ? "active" : "navLink")}
             >
               Request
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/Request"
+              className={({ isActive }) => (isActive ? "active" : "navLink")}
+            >
+              Add Request
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/Request"
+              className={({ isActive }) => (isActive ? "active" : "navLink")}
+            >
+              Manage Supervisor
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/Log-Out"
+              className={({ isActive }) => (isActive ? "active" : "navLink")}
+            >
+              Log in
             </NavLink>
           </li>
           <li>
