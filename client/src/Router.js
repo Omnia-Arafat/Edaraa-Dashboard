@@ -55,6 +55,11 @@ export const router = createBrowserRouter([
       },
 
       {
+        path: "/Warehouse_info",
+        element: <Warehouse_info/>,
+      },
+
+      {
         path: "/Mange_products",
         element: <Mange_products />,
       },
@@ -74,6 +79,7 @@ export const router = createBrowserRouter([
         path: "/Update_warehouse",
         element: <Update_warehouse/>,
       },
+     
     ],
   },
 ]);
