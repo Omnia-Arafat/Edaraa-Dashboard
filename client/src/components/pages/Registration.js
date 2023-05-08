@@ -6,15 +6,20 @@ const Registration = () => {
   return (
     <div>
     <div class="container">
-    <h1 id="welcome-text">Welcome , Omnia</h1>
     <div class="main-content">
+
+    <input type="number" id="name" placeholder="Please Enter Your phone" />
+    <input type="number" id="phone" placeholder="Please Enter Your phone" />
+
       <input type="email" id="email" placeholder="Please Enter Your Email" />
       <input
         type="password"
         id="password"
         placeholder="Please Enter Your password"
       />
-     <button id='log-in-btn'> Log in</button>
+
+      
+     <button id='reg-in-btn'> Register</button>
     </div>
   </div>
     </div>

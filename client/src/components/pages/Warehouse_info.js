@@ -1,41 +1,39 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import Product_card from "./Product_card";
 import "../../styles/Warehouse_info.css";
-import axios from "axios";
-import Spinner from "react-bootstrap/Spinner";
-import Alert from "react-bootstrap/Alert";
 
 const Warehouse_info = () => {
-  const [products, setProduct] = useState({
-    loading: true,
-    results: [],
-    err: null,
-    reload: 0,
-  });
+  // const [product, setProduct] = useState({
+  // loading: true,
+  // results: [],
+  // err: null,
+  // reload: 0,
+  // });
 
-  useEffect(() => {
-    setProduct({ ...products, loading: true });
+  // useEffect(() => {
+  // setProduct({ ...product, loading: true });
 
-    axios
-      .get("http://localhost:5000/product")
-      .then((resp) => {
-        console.log(resp);
-        setProduct({
-          ...products,
-          results: resp.data.results,
-          loading: false,
-          err: null,
-        });
-      })
-      .catch((err) => {
-        setProduct({
-          ...products,
-          loading: false,
-          err: "Something went wrong, please try again later!",
-        });
-      });
-  }, []);
+  // axios
+  //   .get('http://localhost:5000/product')
+  //   .then((resp) => {
+  //     console.log(resp);
+  //     setProduct({
+  //       ...product,
+  //       results: resp.data.results,
+  //       loading: false,
+  //       err: null,
+  //     });
+  //   })
+  //   .catch((err) => {
+  //     setProduct({
+  //       ...product,
+  //       loading: false,
+  //       err: 'Something went wrong, please try again later!',
+  //     });
+  //   });
+
+  // }, []);
 
   const {
     register,
@@ -90,18 +88,10 @@ const Warehouse_info = () => {
       </form>
 
       <div id="request_product_div_cont">
-        {products.loading && <Spinner animation="border" />}
-        {products.err && <Alert variant="danger">{products.err}</Alert>}
-        {products.results?.map((product) => (
-          <Product_card
-            key={product.id}
-            product={product}
-            name={product.name}
-            description={product.description}
-            image={product.image_url}
-            id={product.id}
-          />
-        ))}
+        <Product_card />
+        <Product_card />
+        <Product_card />
+        <Product_card />
       </div>
     </div>
   );
