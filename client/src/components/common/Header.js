@@ -21,7 +21,7 @@ const header = () => {
           </li>
           <li>
             <NavLink
-              to="/Mange_products"
+              to="/Warehouse"
               className={({ isActive }) => (isActive ? "active" : "navLink")}
             >
              Manage Warehouse
