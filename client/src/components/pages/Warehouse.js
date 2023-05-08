@@ -17,7 +17,7 @@ function Warehouse(props) {
           <button>
             <Link to={"/Mange_products/"}>Add</Link>
           </button>
-          C:\Users\DELL\OneDrive\Documents\GitHub\Edaraa-Dashboard\client\src\components\pages\Warehouse.js
+          
           <button>
             <Link to={"/Update_warehouse/"}>Update</Link>
           </button>
