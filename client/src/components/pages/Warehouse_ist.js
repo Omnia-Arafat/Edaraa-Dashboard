@@ -4,6 +4,10 @@ import Warehouse from "./Warehouse";
 import { Data } from "../../core/data/warehouse_mokup_data";
 
 const Warehouse_list = () => {
+
+
+
+  
   const warehouse_data = Data;
 
 

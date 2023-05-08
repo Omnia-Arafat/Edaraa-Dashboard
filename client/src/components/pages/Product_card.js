@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import productImage from '../../uploaded/images/cat.jpg';
 
-const Product_card = () => {
+const Product_card = (props) => {
   return (
     <div id='Product_card'>
 
