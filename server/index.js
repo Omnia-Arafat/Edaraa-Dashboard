@@ -1,42 +1,23 @@
-// =================== INITIALIZE EXPRESS APP ========================
-
 const express = require("express");
 const app = express();
-
-// =================== GLOBAL MIDDLEWARE ========================
-
-const db = require ("../server/DB/DbConnection");
+const db = require("../server/DB/DbConnection");
 const path = require("path");
 const morgan = require("morgan");
 const cors = require("cors");
-app.use(cors());
 const bodyParser = require("body-parser");
-app.use(express.urlencoded({ extended: true })); // TO ACCESS URL FORM ENCODED
-app.use(express.static("upload"));
-app.use(express.json());
+
+
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-// execute the INSERT query
-/*db.query( 
-  "INSERT INTO user (id,name,email,password,token,role,status,phone) VALUES ('4','ayakamal','aya77@gmail.com','12344678','22366448865','0','0','011598555');",
-  (err, results, fields) => {
-    if (err) {
-      console.error("Error executing query:", err);
-      return;
-    }
-    console.log("Query executed successfully");
-  }
-);*/
-
-// close the connection to the database
-//db.end();
-
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("upload"));
 app.use(express.static(path.join(__dirname, "build")));
 
 // Your API routes go here
 
 app.get("/api/users", function (req, res) {
-  const users= [
+  const users = [
     { id: 1, name: "Alice" },
     { id: 2, name: "Bob" },
     { id: 3, name: "Charlie" },
@@ -45,11 +26,13 @@ app.get("/api/users", function (req, res) {
   res.json(users);
 });
 
-// =================== RUN THE APP ========================
-
-app.listen("5000", () => {
-  console.log("run in port 5000");
+app.get('/product', (req, res) => {
+  res.send('This is the product page');
 });
+
+// app.get('/product', function(req, res) {
+//   // Handle the request and send a response
+// });
 
 // ====================  Required Module ====================
 const auth = require("./routes/auth");
@@ -57,9 +40,13 @@ const warehouse = require("./routes/warehouse");
 const product = require("./routes/product");
 const manage_supervisor = require("./routes/manage_supervisor");
 
-
 // ====================  API ROUTES [ ENDPOINTS ]  ====================
 app.use("/auth", auth);
 app.use("/warehouse", warehouse);
 app.use("/product", product);
 app.use("/manage_supervisor", manage_supervisor);
+
+// =================== RUN THE APP ========================
+app.listen("5000", () => {
+  console.log("run in port 5000");
+});

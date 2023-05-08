@@ -7,15 +7,12 @@ import Request from "./components/pages/Request";
 import Log_Out from "./components/pages/Log_Out";
 import Log_in from "./components/pages/Log_in";
 import Add_warehouse from "./components/pages/Mange_warehouse/Add_warehouse";
+import Update_warehouse from "./components/pages/Mange_warehouse/Update_warehouse";
 import Warehouse_info from "./components/pages/Warehouse_info";
 import Mange_products from "./components/pages/Mange_product/Mange_products";
 import Mange_supervisor from "./components/pages/Mange_supervisor/Mange_supervisor";
-<<<<<<< HEAD
-//import log_in from "./components/pages/Log_in";
-=======
 import Registration from "./components/pages/Registration";
 
->>>>>>> 89f75b2d991a579d2d70dbe1eb79f65225b9107c
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -72,6 +69,10 @@ export const router = createBrowserRouter([
       {
         path: "/Add_warehouse",
         element: <Add_warehouse/>,
+      },
+      {
+        path: "/Update_warehouse",
+        element: <Update_warehouse/>,
       },
     ],
   },

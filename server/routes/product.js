@@ -1,21 +1,33 @@
 const router = require("express").Router();
-const conn = require("../DB/DbConnection");
-const supervisor = require("../midleware/supervisor");
-const admin = require("../midleware/admin");
-const { body, validationResult } = require("express-validator");
-const upload = require("../midleware/uploadimage");
-const util = require("util"); // helper
-const fs = require("fs"); // file system
+import conn, { query as _query } from "../DB/DbConnection";
+import supervisor from "../midleware/supervisor";
+import admin from "../midleware/admin";
+import { body, validationResult } from "express-validator";
+import { single } from "../midleware/uploadimage";
+import { promisify } from "util"; // helper
+import { unlinkSync } from "fs"; // file system
+
+
+// const router = require("express").Router();
+// const conn = require("../DB/DbConnection");
+// const supervisor = require("../midleware/supervisor");
+// const admin = require("../midleware/admin");
+// const { body, validationResult } = require("express-validator");
+// const upload = require("../midleware/uploadimage");
+// const util = require("util"); // helper
+// const fs = require("fs"); // file system
+
+
 
 //creat new product(admin)
 router.post(
-    "",admin,
-   upload.single("image"),
+    "",supervisor,
+   single("image"),
     body("name")
       .isString()
       .withMessage("please enter a valid product name")
       .isLength({ min: 10 })
-      .withMessage("movie name should be at lease 10 characters"),
+      .withMessage("product name should be at lease 10 characters"),
   
     body("description")
       .isString()
@@ -48,7 +60,7 @@ router.post(
           });
         }
   
-        // 3- PREPARE MOVIE OBJECT
+        // 3- PREPARE product OBJECT
         const product = {
           name: req.body.name,
           stock: req.body.stock,
@@ -57,8 +69,8 @@ router.post(
           image_url:req.file.filename,
         };
   
-        // 4 - INSERT MOVIE INTO DB
-        const query = util.promisify(conn.query).bind(conn);
+        // 4 - INSERT product INTO DB
+        const query = promisify(_query).bind(conn);
         await query("insert into product set ? ", product);
         res.status(200).json({
           msg: "product created successfully !",
@@ -74,12 +86,12 @@ router.post(
  router.put(
   "/:id", // params
   admin,
-  upload.single("image"),
+  single("image"),
   body("name")
       .isString()
       .withMessage("please enter a valid product name")
       .isLength({ min: 10 })
-      .withMessage("movie name should be at lease 10 characters"),
+      .withMessage("product name should be at lease 10 characters"),
   
     body("description")
       .isString()
@@ -95,7 +107,7 @@ router.post(
      async (req, res) => {
     try {
       // 1- VALIDATION REQUEST [manual, express validation]
-      const query = util.promisify(conn.query).bind(conn);
+      const query = promisify(_query).bind(conn);
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
@@ -120,7 +132,7 @@ router.post(
 
       if (req.file) {
         productObj.image_url = req.file.filename;
-        fs.unlinkSync("./upload/" + product[0].image_url); // delete old image
+        unlinkSync("./upload/" + product[0].image_url); // delete old image
       }
 
       // 4- UPDATE product
@@ -141,7 +153,7 @@ router.delete(
   async (req, res) => {
     try {
       // 1- CHECK IF product EXISTS OR NOT
-      const query = util.promisify(conn.query).bind(conn);
+      const query = promisify(_query).bind(conn);
       const product = await query("select * from product where id = ?", [
         req.params.id,
       ]);
@@ -149,7 +161,7 @@ router.delete(
         res.status(404).json({ ms: "product not found !" });
       }
      //  2- REMOVE product IMAGE
-      fs.unlinkSync("./upload/" + product[0].image_url); // delete old image
+      unlinkSync("./upload/" + product[0].image_url); // delete old image
       await query("delete from product where id = ?", [product[0].id]);
       res.status(200).json({
         msg: "product delete successfully",
@@ -163,7 +175,7 @@ router.delete(
 
 //list
 router.get("/list/:warehouse_id", async (req, res) => {
-  const query = util.promisify(conn.query).bind(conn);
+  const query = promisify(_query).bind(conn);
   const product = await query("select * from product where warehouse_id = ?", [
     req.params.warehouse_id,
   ]); 
@@ -174,7 +186,7 @@ router.get("/list/:warehouse_id", async (req, res) => {
 });
 //show
 router.get("/show/:id", async (req, res) => {
-  const query = util.promisify(conn.query).bind(conn);
+  const query = promisify(_query).bind(conn);
   const product = await query("select * from product where id = ?", [
     req.params.id,
   ]);
@@ -186,4 +198,4 @@ router.get("/show/:id", async (req, res) => {
   res.status(200).json(product[0]);
 });
 
-  module.exports = router;
+  export default router;
