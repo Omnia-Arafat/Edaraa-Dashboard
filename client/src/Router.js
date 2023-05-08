@@ -40,12 +40,12 @@ export const router = createBrowserRouter([
         element: <Log_Out />,
       },
       {
-        path: "/Warehouse_info/:id",
+        path: "/Mange_products/:id",
 
         children: [
           {
             path: "",
-            element: <Warehouse_info />,
+            element: <Mange_products />,
           },
           {
             path: "",

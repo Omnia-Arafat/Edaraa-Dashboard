@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Warehouse(props) {
   return (
     <div id="warehouse-container">
-      <Link to={"/Warehouse_info/" + props.id}>
+      <Link to={"/Mange_products/" + props.id}>
         <div id="warehouse-body">
           <div
             className="box mb-3 bg-white"
