@@ -43,7 +43,7 @@ body{
       }
       
     
-    #email ,#password,#log-in-btn{
+    #email ,#password,#reg-in-btn ,#name,#phone{
     
         background: #FFFFFF;
         border: 1px solid #141420;
@@ -67,7 +67,7 @@ body{
       
     }
     
-    #log-in-btn{
+    #reg-in-btn{
     
         width: 114px;
     color: var(--blue-color);

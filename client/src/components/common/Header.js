@@ -61,10 +61,18 @@ const header = () => {
           </li>
           <li>
             <NavLink
-              to="/Log-Out"
+              to="http://localhost:3000/"
               className={({ isActive }) => (isActive ? "active" : "navLink")}
             >
               Log in
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/Registration"
+              className={({ isActive }) => (isActive ? "active" : "navLink")}
+            >
+             Register
             </NavLink>
           </li>
           <li>
